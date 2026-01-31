@@ -1,73 +1,138 @@
-# React + TypeScript + Vite
+# 🌐 Personal Portfolio — Alireza Sohrabizadeh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.  
+Designed to showcase my projects and frontend engineering skills as I apply for the **Wolt Software Engineering Internship (Frontend)**.
 
-Currently, two official plugins are available:
+Live site → **https://alirezasohrabizadeh.netlify.app**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎨 Clean UI / UX
+- Modern, minimalist design
+- Light & dark themes (persistent)
+- Smooth animations with Framer Motion
+- Tab-based navigation (Projects / About / Contact)
 
-## Expanding the ESLint configuration
+### 💻 Frontend-Focused
+- Fully built with React + TypeScript
+- Component-driven architecture
+- Responsive across all devices
+- Organized, maintainable code structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### ⚙️ Tech Stack
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Vite**
+- **Framer Motion**
+- **Lucide Icons**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📱 Mobile-First
+- Optimized spacing for small screens
+- Horizontal-scroll tabs (scrollbar hidden)
+- Smooth layout transitions
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Project Structure
+
+```
+src/
+ ├── assets/        # Profile image, favicon-related assets
+ ├── components/    # Hero, Tabs, ProjectCard, ThemeToggle, etc.
+ ├── sections/      # Projects, About, Contact sections
+ ├── data/          # Project definitions (projects.ts)
+ ├── hooks/         # Custom hooks (e.g., useTheme)
+ ├── lib/           # Utilities (e.g., cn.ts)
+ ├── App.tsx        # Main layout + tab navigation
+ └── main.tsx       # App entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧩 Key Components
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### **Hero**
+- Name, title, short intro
+- GitHub, LinkedIn, CV buttons
+- Avatar with glow effect
+- Smooth animated entry
+
+### **Tabs**
+- Animated underline using Framer Motion
+- Mobile-friendly horizontal scrolling
+- Minimal, clean design
+
+### **Project Cards**
+- Reusable `ProjectCard` component
+- Tech badges
+- GitHub + Live demo links
+- Smooth fade-in animations
+
+### **Contact Section**
+- Email, GitHub, LinkedIn actions
+- Clear call-to-action with simple wording
+
+---
+
+## 🛠 Running the Project Locally
+
+```bash
+git clone https://github.com/sepahsalar/portfolio
+cd portfolio
+npm install
+npm run dev
 ```
+
+Then open:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🚀 Deployment
+
+The portfolio is deployed on **Netlify** with continuous deployment from GitHub.
+
+Build command:
+
+```bash
+npm run build
+```
+
+Output directory:
+
+```
+dist/
+```
+
+---
+
+## 🖼 Favicon
+
+A custom green **AS** favicon (SVG + PNG) is included in:
+
+```
+public/favicon.svg
+public/favicon.png
+```
+
+These are automatically used via `<link>` tags in `index.html`.
+
+---
+
+## 📬 Contact
+
+Feel free to reach out:
+
+- **Email:** alireza.sohrabizadeh@gmail.com  
+- **LinkedIn:** https://linkedin.com/in/alireza-sohrabizadeh  
+- **GitHub:** https://github.com/sepahsalar  
+
+---
+
+Built with ❤️ using React, TypeScript, Tailwind, and Framer Motion.
