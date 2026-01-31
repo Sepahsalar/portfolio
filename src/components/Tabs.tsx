@@ -10,7 +10,8 @@ type Props = {
 
 export function Tabs({ tabs, active, onChange }: Props) {
   return (
-    <div className="relative mt-8 w-full overflow-x-auto">
+    <div className="relative mt-8 w-full overflow-x-auto px-1 scrollbar-hide">
+	{/* <div className="relative mt-8 w-full overflow-x-auto"> */}
       <div className="flex items-center gap-5 border-b border-slate-200 pb-1 dark:border-slate-700">
 
         {tabs.map((tab) => {
