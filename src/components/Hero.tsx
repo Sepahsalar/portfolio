@@ -65,7 +65,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium transition
-                         border-slate-200 bg-white text-slate-900 hover:bg-slate-50
+                         border-slate-200 bg-white text-slate-900 hover:bg-slate-100
                          dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100 dark:hover:bg-slate-900"
             >
               <Github size={16} />
@@ -77,7 +77,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium transition
-                         border-slate-200 bg-white text-slate-900 hover:bg-slate-50
+                         border-slate-200 bg-white text-slate-900 hover:bg-slate-100
                          dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100 dark:hover:bg-slate-900"
             >
               <Linkedin size={16} />
@@ -89,7 +89,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-medium transition
-                         border border-slate-200 bg-white text-slate-900 hover:bg-slate-50
+                         border border-slate-200 bg-white text-slate-900 hover:bg-slate-100
                          dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100 dark:hover:bg-slate-900"
             >
               CV
