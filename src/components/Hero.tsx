@@ -3,8 +3,6 @@ import { Github, Linkedin } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "../lib/cn";
 
-// Optional: add a photo at src/assets/me.jpg
-// If you don't have it, we'll just show the emoji.
 let meSrc: string | null = null;
 try {
   meSrc = new URL("../assets/me.jpg", import.meta.url).toString();
@@ -74,6 +72,17 @@ export function Hero() {
             <Linkedin size={16} />
             LinkedIn
           </a>
+
+		  <a
+			href="/cv.pdf"
+			target="_blank"
+  			rel="noopener noreferrer"
+			className="inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition
+						border border-slate-200 bg-white text-slate-900 hover:bg-slate-50
+						dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100 dark:hover:bg-slate-900"
+			>
+			View CV
+		  </a>
 
           <ThemeToggle />
         </div>
