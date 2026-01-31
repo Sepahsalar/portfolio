@@ -1,47 +1,44 @@
-import { cn } from "../lib/cn";
+import { motion } from "framer-motion";
 
-type Tab = {
-  key: string;
-  label: string;
-};
+type TabItem = { key: string; label: string };
 
 type Props = {
-  tabs: Tab[];
+  tabs: readonly TabItem[];
   active: string;
   onChange: (key: string) => void;
 };
 
 export function Tabs({ tabs, active, onChange }: Props) {
   return (
-    <div
-      className={cn(
-        "mt-10 inline-flex rounded-2xl border p-1",
-        "border-slate-200 bg-slate-50",
-        "dark:border-slate-800 dark:bg-slate-900/40"
-      )}
-      role="tablist"
-      aria-label="Sections"
-    >
-      {tabs.map((t) => {
-        const isActive = t.key === active;
-        return (
-          <button
-            key={t.key}
-            type="button"
-            role="tab"
-            aria-selected={isActive}
-            onClick={() => onChange(t.key)}
-            className={cn(
-              "rounded-xl px-4 py-2 text-sm font-semibold transition",
-              isActive
-                ? "bg-white text-slate-900 shadow-sm dark:bg-slate-950 dark:text-slate-100"
-                : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
-            )}
-          >
-            {t.label}
-          </button>
-        );
-      })}
+    <div className="relative mt-8 w-full overflow-x-auto">
+      <div className="flex items-center gap-5 border-b border-slate-200 pb-1 dark:border-slate-700">
+
+        {tabs.map((tab) => {
+          const isActive = tab.key === active;
+          return (
+            <button
+              key={tab.key}
+              onClick={() => onChange(tab.key)}
+              className={`
+                relative pb-2 text-sm font-medium transition
+                ${isActive
+                  ? "text-slate-900 dark:text-white"
+                  : "text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"}
+              `}
+            >
+              {tab.label}
+
+              {isActive && (
+                <motion.div
+                  layoutId="underline"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-indigo-500 dark:bg-indigo-400"
+                />
+              )}
+            </button>
+          );
+        })}
+
+      </div>
     </div>
   );
 }

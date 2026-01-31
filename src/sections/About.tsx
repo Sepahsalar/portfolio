@@ -1,30 +1,41 @@
-import { motion } from "framer-motion";
-
 export function About() {
   return (
-    <section id="about" className="mt-12">
-      <motion.h2
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.4 }}
-        className="text-2xl font-semibold text-slate-900 dark:text-slate-100"
-      >
-        About
-      </motion.h2>
+    <section
+      id="about"
+      className="prose prose-slate dark:prose-invert max-w-none"
+    >
+      <h2 className="text-2xl font-bold tracking-tight">About Me</h2>
 
-      <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-5 text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-900/40 dark:text-slate-300">
-        <p>
-          I’m a software engineer based in Espoo, Finland, with experience across product,
-          data, and engineering. I enjoy building fast, accessible interfaces and improving
-          UX through careful state handling and clean UI patterns.
-        </p>
-        <p className="mt-3">
-          I’m currently focusing on frontend engineering with React + TypeScript and
-          building projects that demonstrate production-style practices: clear component
-          structure, responsive design, and reliable behavior.
-        </p>
-      </div>
+      <p className="leading-relaxed">
+        I'm Alireza Sohrabizadeh — a software engineer focused on building clean,
+        user-friendly web applications with <strong>React</strong> and
+        <strong> TypeScript</strong>. I enjoy implementing well-structured UI
+        components, building responsive layouts, and turning complex logic into
+        intuitive interfaces.
+      </p>
+
+      <p className="leading-relaxed">
+        I’m currently applying for the{" "}
+        <strong>Wolt Software Engineering Internship (Frontend)</strong>.
+        My goal is to join a high-impact engineering team where I can learn,
+        collaborate, and ship meaningful real-world product features.
+      </p>
+
+      <h3 className="text-xl font-semibold mt-6">What I’m good at</h3>
+      <ul className="list-disc pl-5 space-y-1">
+        <li>Clean, accessible, mobile-first UI development</li>
+        <li>React + TypeScript component architecture</li>
+        <li>State management patterns (hooks, context)</li>
+        <li>API integration and async logic</li>
+        <li>Writing maintainable, readable code</li>
+      </ul>
+
+      <h3 className="text-xl font-semibold mt-6">What I’m learning</h3>
+      <ul className="list-disc pl-5 space-y-1">
+        <li>Advanced frontend patterns & optimization</li>
+        <li>Design systems and component libraries</li>
+        <li>Improving UX consistency in large apps</li>
+      </ul>
     </section>
   );
 }
